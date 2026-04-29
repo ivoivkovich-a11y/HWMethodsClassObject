@@ -28,12 +28,18 @@ public class Order {
        if (this.basket == null || basket == null) {
            return false;
        }
+        if (this.basket == null && basket == null) {
+            return true;
+        }
        if (this.basket.length != order.basket.length) {
            return false;
        }
        for (int i = 0; i < this.basket.length; i++) {
            Product product1 = this.basket[i];
            Product product2 = order.basket[i];
+           if (product1 == null && product2 == null) {
+               return true;
+           }
            if (product1 == null || product2 == null){
                return false;
            }

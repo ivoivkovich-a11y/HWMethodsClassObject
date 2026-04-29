@@ -1,6 +1,12 @@
 import java.util.Objects;
 
 public class Product {
+    public int id;
+    public String name;
+    public int price;
+    public String category;
+    private static int counter = 0;
+
     public Product(int id, String name, int price, String category) {
         this.id = id;
         this.name = name;
@@ -9,14 +15,7 @@ public class Product {
         counter++;
 
     }
-    public int id;
-    public String name;
-    public int price;
-    public String category;
-    private static int counter = 0;
 
-
-    
     @Override
     public boolean equals(Object o) {
 
