@@ -10,13 +10,11 @@ public class Order {
         this.basket = basket;
     }
 
-    // Переопределение toString() с использованием Arrays.toString()
     @Override
     public String toString() {
         return "customer='" + customer +
                ", basket=" + Arrays.toString(basket);
     }
-    // Реализация сравнения заказов (equals)
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -24,8 +22,6 @@ public class Order {
         if (o == null || getClass() != o.getClass())
             return false;
         Order order = (Order) o;
-       // return (customer == order.customer) && Objects.equals(basket, order.basket);
-        // 1. Сравниваем покупателя
        if (!Objects.equals(customer, order.customer)) {
             return false;
         }
@@ -44,12 +40,8 @@ public class Order {
             if (!product1.equals(product2)) {
                return false;
            }
-        }
-
-        //if (Object.)
-        // 2. Сравниваем массивы (порядок и содержимое)
-            // Проверка на null внутри массива и сравнение через equals()
-        return true;
+       }
+       return true;
     }
 
 }
