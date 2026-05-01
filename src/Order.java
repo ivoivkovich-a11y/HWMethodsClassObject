@@ -38,7 +38,7 @@ public class Order {
            Product product1 = this.basket[i];
            Product product2 = order.basket[i];
            if (product1 == null && product2 == null) {
-               return true;
+               continue;
            }
            if (product1 == null || product2 == null){
                return false;
